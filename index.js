@@ -68,12 +68,12 @@ app.route('/edit/:id')
 });
 
 
-//DELETE
+//DELETE 
 app.route('/delete/:id')
 .get((req,res) => {
     var id = req.params.id;db.deleteOne({_id: ObjectId(id)}, (err, result) => {
      if (err) return res.send(500, err);
- console.log("Registo eliminado com sucesso!");
+ console.log("CD eliminado com sucesso!");
  res.redirect('/show');
     });
 });
